@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <h1>Yahoo Baba : jQuery Syntax</h1>
+
+ <div id="test1">
+   <h2>Test Box 1</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, laudantium.</p>
+ </div>
+
+ <div id="test2">
+   <h2>Test Box 2</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, laudantium.</p>
+ </div>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    var a = $('#test1').html();
+    console.log(a);
+
+    var b = $('#test2').html();
+    console.log(b);
+  });
+</script>
+</body>
+</html>

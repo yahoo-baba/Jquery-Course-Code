@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 23px;}
+    #box{
+      background: lightgreen ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    #box2{
+      background: pink ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    #test{
+      background: pink;
+      padding: 5px;
+    }
+    .red{ color:red; }
+  </style>
+</head>
+<body>
+  <h1>jQuery wrapAll() & wrapInner()</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum at ut tempora eaque hic magnam, minima veniam, ipsum tempore possimus.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum at ut tempora eaque hic magnam, minima veniam, ipsum tempore possimus.</p>
+
+  <br>
+  <button id="wrapAllBtn">WrapAll</button>
+  <button id="wrapInnerBtn">WrapInner</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#wrapAllBtn').click(function(){
+      $('p').wrapAll('<div id="test"></div>');
+    });
+
+    $('#wrapInnerBtn').click(function(){
+      $('h1').wrapInner('<span class="red"></span>');
+    });
+  });
+</script>
+
+</body>
+</html>

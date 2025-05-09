@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;}
+    #box{
+      background: lightgreen ;
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #000;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Stop Method</h1>
+
+  <div id="box">Yahoo Baba</div>
+  <br>
+  <button id="animateBtn">Animate</button>
+  <button id="stopBtn">Stop</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#animateBtn').click(function(){
+      $('#box').animate({left : '200px'},3000);
+      $('#box').animate({fontSize : '25px'},2000);
+    });
+
+    $('#stopBtn').click(function(){
+      $('#box').stop(true);
+    });
+  });
+</script>
+
+</body>
+</html>

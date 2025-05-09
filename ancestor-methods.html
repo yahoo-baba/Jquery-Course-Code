@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;}
+    h2{ font-size: 18px;}
+    #main-outer{
+      background: LAVENDER;
+      border: 1px solid MEDIUMPURPLE;
+      width:90%;
+      padding: 0px 15px 30px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    #outer{
+      background: MOCCASIN;
+      border: 1px solid DARKSALMON;
+      width: 95%;
+      padding: 0px 10px 30px;
+      margin: 0 auto;
+    }
+
+    #inner{
+      background: pink;
+      border: 1px solid PALEVIOLETRED;
+      width:90%;
+      padding: 0px 15px 30px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    #inner div:last-child{
+      margin-right: 0;
+    }
+    #inner > div{
+      background: LIGHTCYAN;
+      border: 1px solid CADETBLUE;
+      width:20%;
+      float: left;
+      margin-right: 15px;
+      padding: 40px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Ancestor Methods</h1>
+
+  <div id="main-outer" style="position:relative;">
+    <h2>Main Outer</h2>
+    <ul id="outer" >
+      <h2>Outer</h2>
+      <div id="inner">
+        <h2 id="child-head">Inner</h2>
+        <div>A</div>
+        <div>B</div>
+        <div id="child-C">C</div>
+        <div>D</div>
+      </div>
+    </ul>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#child-C').closest('ul').css('background','red');
+    });
+  </script>
+</body>
+</html>

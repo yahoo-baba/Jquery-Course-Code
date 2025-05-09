@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;text-align: center;}
+
+    #first{
+      background: MOCCASIN;
+      border: 1px solid DARKSALMON;
+      width: 90%;
+      padding:0px 10px;
+      margin: 0 auto;
+    }
+    #second{
+      background: LAVENDER;
+      border: 1px solid MEDIUMPURPLE;
+      width: 90%;
+      padding:0px 10px;
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>jQuery has() & is() Method</h1>
+
+  <div id="first">
+    <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit.</b> Consequatur, aut?</p>
+    <p>Consectetur adipisicing elit. Distinctio, omnis?</p>
+  </div>
+  <ul>
+    <li>Orange</li>
+    <li><span>Apple</span></li>
+    <li>Banana</li>
+    <li>Grapes</li>
+  </ul>
+
+  <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aut?</p>
+  <p>Consectetur adipisicing <span class="test">elit. Distinctio</span>, omnis?</p>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    //$('p').has('.test').css('background','gold');
+    $('p').click(function(){
+      if($(this).parent().is('div')){
+        $(this).css('background','gold');
+      }
+    });
+
+  });
+</script>
+</body>
+</html>

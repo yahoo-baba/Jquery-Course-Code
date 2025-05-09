@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;}
+    #box{
+      background: lightgreen ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    #box2{
+      background: pink ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Clone() Method</h1>
+
+  <div id="box">
+    <h2 class="abc">Test Box</h2>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia, laudantium.</p>
+  </div>
+  <br>
+  <div id="box2">
+    <p>This is another DIV.</p>
+  </div>
+  <br>
+
+  <button id="cloneBtn">Clone</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#cloneBtn').click(function(){
+      $('#box h2').clone().prependTo('#box2');
+      $('#box p').clone().appendTo('#box2');
+    });
+  });
+</script>
+
+
+</body>
+</html>

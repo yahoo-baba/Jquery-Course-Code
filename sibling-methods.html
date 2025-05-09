@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;}
+    h2{ font-size: 18px;}
+
+    #outer{
+      background: MOCCASIN;
+      border: 1px solid DARKSALMON;
+      width: 95%;
+      padding: 0px 10px 30px;
+      margin: 0 auto;
+    }
+
+    #inner{
+      background: pink;
+      border: 1px solid PALEVIOLETRED;
+      width:90%;
+      padding: 0px 15px 30px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    #inner div:last-child{
+      margin-right: 0;
+    }
+    #inner > div{
+      background: LIGHTCYAN;
+      border: 1px solid CADETBLUE;
+      width:16.5%;
+      float: left;
+      margin-right: 15px;
+      padding: 40px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Sibling Methods</h1>
+
+  <div id="outer">
+    <h2>Outer</h2>
+    <div id="inner">
+      <h2>Inner</h2>
+      <div class="test">A</div>
+      <div>B</div>
+      <div >C</div>
+      <div id="child-C">D</div>
+      <div class="test">E</div>
+    </div>
+  </div>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#child-C').prevUntil('.test').css('background','red');
+  });
+</script>
+
+</body>
+</html>

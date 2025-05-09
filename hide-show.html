@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;}
+    #box{
+      background: lightgreen ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery hide & show Method</h1>
+
+  <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia, laudantium.</p>
+  </div>
+  <br>
+  <button id="hideBtn">Hide</button>
+  <button id="showBtn">Show</button>
+  <button id="toggleBtn">Toggle</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#hideBtn').click(function(){
+      $('#box').hide(3000,function(){
+        console.log("Now it is hidden");
+      });
+    });
+
+    $('#showBtn').click(function(){
+      $('#box').show(1000,function(){
+        console.log("Now it is show");
+      });
+    });
+
+    $('#toggleBtn').click(function(){
+      $('#box').toggle(1000,function(){
+        console.log("Hey Toggle");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

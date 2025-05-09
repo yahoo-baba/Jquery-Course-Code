@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;text-align: center;}
+    h3{ color: red; }
+    #box{
+      background: MOCCASIN;
+      border: 1px solid DARKSALMON;
+      width: 80%;
+      height: 160px;
+      padding:0px 10px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Event.stopPropagation()</h1>
+
+  <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio inventore excepturi optio, eum commodi hic.</p>
+    <button>Test Button</button>
+  </div>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#box').click(function(){
+      alert("The div element was clicked");
+    });
+
+    $('h2').click(function(event){
+      alert("The h2 element was clicked");
+    });
+
+    $('p').click(function(event){
+      //event.stopPropagation();
+      alert("The p element was clicked : " + event.isPropagationStopped());
+    });
+
+    $('button').click(function(){
+      alert("The button element was clicked");
+    });
+  });
+</script>
+
+</body>
+</html>

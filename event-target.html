@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;text-align: center;}
+    h3{ color: red; }
+    #box{
+      background: LAVENDER;
+      border: 1px solid MEDIUMPURPLE;
+      width: 90%;
+      height: 200px;
+      padding:0px 10px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Event.target Property</h1>
+
+  <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio inventore excepturi optio, eum commodi hic.</p>
+    <button>Test Button</button>
+  </div>
+  <br>
+
+  <h3></h3>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#box').on("click",function(){
+      $('h3').html("Target Element: " + event.target.innerHTML);
+    });
+  });
+</script>
+
+</body>
+</html>

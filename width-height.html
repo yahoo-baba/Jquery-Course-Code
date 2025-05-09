@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;}
+    #box{
+      background: lightgreen ;
+      padding: 30px;
+      margin: 20px;
+      border: 10px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Width & Height Methods</h1>
+
+  <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ut, mollitia eligendi in et reiciendis consequatur expedita accusantium. Consectetur alias, vitae tenetur quia rerum voluptatum.</p>
+  </div>
+  <button id="widthBtn">Width</button>
+  <button id="heightBtn">Height</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#widthBtn').click(function(){
+      $('#box').width("400px") ;
+
+      console.clear();
+      console.log("Width : " + $('#box').width());
+      console.log("InnerWidth : " + $('#box').innerWidth());
+      console.log("OuterWidth : " + $('#box').outerWidth());
+      console.log("OuterWidth(true) : " + $('#box').outerWidth(true));
+    });
+
+    $('#heightBtn').click(function(){
+      $('#box').height("500px");
+
+      console.clear();
+      console.log("Height : " + $('#box').height());
+      console.log("InnerHeight : " + $('#box').innerHeight());
+      console.log("OuterHeight : " + $('#box').outerHeight());
+      console.log("OuterHeight(true) : " + $('#box').outerHeight(true));
+    });
+  });
+</script>
+</body>
+</html>

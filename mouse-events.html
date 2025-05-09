@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    #box{
+      background: pink;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+ <h1>Yahoo Baba : jQuery Mouse Events</h1>
+
+  <div id="box" class="test">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, laudantium.</p>
+  </div>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#box').click(function(){
+      $('#box').css('background-color','green');
+    });
+
+    $('#box').dblclick(function(){
+      $('#box').css('background-color','orange');
+    });
+
+    $('#box').contextmenu(function(){
+      $('#box').css('background-color','blue');
+    });
+
+    $('#box').mouseenter(function(){
+      $('#box').css('background-color','tan');
+    });
+
+    $('#box').mouseleave(function(){
+      $('#box').css('background-color','purple');
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

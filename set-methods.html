@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    #box{
+      background: pink;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    .red{ color:red; }
+  </style>
+</head>
+<body>
+ <h1>jQuery Set Methods</h1>
+
+  <div id="box" class="test">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia, laudantium.</p>
+  </div>
+  <br>
+  <button id="clickbutton">Set Value</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#clickbutton').click(function(){
+      $('#box h2').text("Hello Yahoo baba");
+
+      $('#box p').html("this <b>is new</b> text.");
+
+      $('#box h2').attr("class","red");
+    });
+  });
+</script>
+
+</body>
+</html>

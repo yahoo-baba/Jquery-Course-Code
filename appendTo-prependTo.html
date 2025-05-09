@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;}
+    #box{
+      background: lightgreen ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery AppendTo & PrependTo</h1>
+
+  <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia, laudantium.</p>
+  </div>
+
+  <br>
+  <button id="appendBtn">AppendTo</button>
+  <button id="prependBtn">PrependTo</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#appendBtn').click(function(){
+      $('<h3>AppendTo : Yahoo Baba</h3>').appendTo('#box');
+    });
+
+    $('#prependBtn').click(function(){
+      $('<h3>prependTo : Yahoo Baba</h3><p>this is just text.</p>').prependTo('#box');
+    });
+  });
+</script>
+
+</body>
+</html>

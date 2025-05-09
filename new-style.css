@@ -1,0 +1,37 @@
+body { font-family: arial}
+h1{ font-size: 25px;}
+#main-outer{
+  background: LAVENDER;
+  border: 1px solid MEDIUMPURPLE;
+  width:90%;
+  padding: 0px 15px 30px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#outer{
+  background: MOCCASIN;
+  border: 1px solid DARKSALMON;
+  width: 95%;
+  padding: 0px 10px 30px;
+  margin: 0 auto;
+}
+
+#inner{
+  background: pink;
+  border: 1px solid PALEVIOLETRED;
+  width:90%;
+  padding: 0px 15px 30px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#inner > div{
+  background: LIGHTCYAN;
+  border: 1px solid CADETBLUE;
+  width:20%;
+  float: left;
+  margin-right: 15px;
+  padding: 40px 0;
+  text-align: center;
+}

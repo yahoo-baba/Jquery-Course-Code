@@ -1,0 +1,19 @@
+body{
+  font-family: arial;
+}
+#test1{
+  background: pink;
+  width: 35%;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #000;
+  float: left;
+}
+#test2{
+  background: orange;
+  width: 35%;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #000;
+  float: right;
+}

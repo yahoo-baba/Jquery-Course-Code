@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 23px;}
+    #box{
+      background: lightgreen ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    #box2{
+      background: pink ;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery ReplaceWith() & ReplaceAll()</h1>
+
+  <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia, laudantium.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, esse!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, esse!</p>
+  </div>
+  <br>
+
+  <button id="replaceBtn">Replace</button>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#replaceBtn').click(function(){
+      //$('#box p:nth-child(3)').replaceWith("Yahoo Baba");
+      $("<span>Yahoo Baba</span>").replaceAll("#box p:first");
+
+    });
+  });
+</script>
+
+
+</body>
+</html>

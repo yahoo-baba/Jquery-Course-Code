@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;text-align: center;margin-bottom: 30px;}
+
+    li{
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>jQuery each() Method</h1>
+
+  <ul>
+    <li>Orange</li>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Grapes</li>
+  </ul>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('li').each(function(){
+      $(this).text("Hello");
+    });
+  });
+</script>
+
+</body>
+</html>

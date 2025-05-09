@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    #box{
+      padding: 10px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+ <h1>Yahoo Baba : jQuery Selectors</h1>
+
+  <div id="box" class="test">
+    <h2>Test Box 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, laudantium.</p>
+  </div>
+
+  <ul id="list">
+    <li>Orange</li>
+    <li class="test">Banana</li>
+    <li>Grapes</li>
+    <li class="test">Apple</li>
+    <li>Guava</li>
+  </ul>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $("ul li:lt(3)").css("border","2px solid red");
+  });
+</script>
+
+
+</body>
+</html>

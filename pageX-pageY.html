@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;text-align: center;}
+
+    #result{
+      background: LAVENDER;
+      border: 1px solid MEDIUMPURPLE;
+      width: 90%;
+      height: 200px;
+      padding:0px 10px;
+      margin: 0 auto;
+    }
+    #box {
+      background: MOCCASIN;
+      border: 1px solid DARKSALMON;
+      width: 50px;
+      height: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>jQuery pageX & pageY Property</h1>
+
+  <div id="result"></div>
+
+  <div id="box"></div>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $(document).mousemove(function(event){
+      $('#result').text("X: " + event.pageX + " Y: " + event.pageY);
+
+      var x = event.pageX;
+      var y = event.pageY;
+
+      $('#box').offset({top:y,left:x});
+    });
+  });
+</script>
+
+</body>
+</html>

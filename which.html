@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+  <title>Learn jQuery</title>
+  <style>
+    body { font-family: arial}
+    h1{ font-size: 25px;text-align: center;}
+    h2{ color: red; }
+    #box{
+      background: LAVENDER;
+      border: 1px solid MEDIUMPURPLE;
+      width: 90%;
+      height: 200px;
+      padding:0px 10px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Event.which Property</h1>
+
+  <div id="box"></div>
+  <br>
+  <input type="text" id="inputbox">
+  <br>
+  <h2></h2>
+
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#box').on("mouseover mouseout mousedown",function(){
+      $('h2').html(event.type + ": " + event.which);
+    });
+
+    $('#inputbox').on("keydown",function(){
+      $('h2').html(event.type + ": " + event.which);
+    });
+  });
+</script>
+
+</body>
+</html>
