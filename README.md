@@ -5,7 +5,7 @@
 
 ## Youtube Video link
 
-[Bootstrap Course Video Playlist](https://www.youtube.com/playlist?list=PL0b6OzIxLPbzSyiC0PFaqeabe1aGhfrbW)
+[jQuery Course Video Playlist](https://www.youtube.com/playlist?list=PL0b6OzIxLPbzSyiC0PFaqeabe1aGhfrbW)
 
 ## Follow Us
 
